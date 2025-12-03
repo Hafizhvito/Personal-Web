@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "TClicker - Auto Clicker Tool",
         category: "Desktop Application",
-        tags: ["Python", "Tkinter", "Automation"],
+        tags: ["Python"],
         image: "assets/images/tclicker-project.jpg",
         description:
           "A Python-based auto clicker application with customizable click intervals and hotkey support.",
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: " Currency Conversion Calculator",
         category: "Web Development",
-        tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+        tags: ["HTML", "CSS", "JavaScript"],
         image: "assets/images/portfolio-project.jpg",
         description:
           "My personal portfolio website showcasing my projects and skills with modern design and animations.",
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         title: "Weather Dashboard",
         category: "Web Development",
-        tags: ["React", "API Integration", "Chart.js"],
+        tags: ["API Integration"],
         image: "assets/images/weather-dashboard-concept.jpg",
         description:
           "A weather dashboard that displays current weather and forecasts using external weather APIs with interactive charts.",

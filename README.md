@@ -45,7 +45,6 @@ Main Web/
 └── assets/
     └── images/        # Image assets
         ├── _photo.png
-        ├── signature.png
         └── [project images]
 ```
 
@@ -125,7 +124,6 @@ const projectsData = [
 ## 📧 Contact Information
 
 - **Email**: [pixelsreet@gmail.com](mailto:pixelsreet@gmail.com)
-- **Phone**: +62 812 3456 7890
 - **Location**: Jakarta, Indonesia
 
 ## 🌐 Social Links

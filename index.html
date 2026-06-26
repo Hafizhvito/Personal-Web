@@ -3,14 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+    />
     <title>Vito | Learning & Growing Developer</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -31,11 +40,12 @@
         </a>
         <div class="nav-links">
           <a href="#about" class="nav-link">About</a>
+          <a href="#background" class="nav-link">Experience</a>
           <a href="#work" class="nav-link">Learning</a>
           <a href="#projects" class="nav-link">Projects</a>
           <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <button class="menu-toggle">
+        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
           <div class="hamburger"></div>
         </button>
       </div>
@@ -127,44 +137,97 @@
               contributing to open-source projects, or sharing my learning
               journey with fellow students.
             </p>
-            <div class="signature">
-              <img
-                src="assets/images/signature.png"
-                alt="Signature"
-                onerror="this.style.display='none'"
-              />
-            </div>
           </div>
           <div class="about-skills">
             <div class="skill-category">
-              <h3>Learning Focus</h3>
-              <div class="skill-bar">
-                <div class="skill-name">Frontend Development</div>
-                <div class="skill-progress" data-level="55"></div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-name">Backend Development</div>
-                <div class="skill-progress" data-level="70"></div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-name">UI/UX Design</div>
-                <div class="skill-progress" data-level="40"></div>
-              </div>
+              <h3>Core Skills</h3>
+              <ul class="skill-chips">
+                <li class="skill-chip">Full-Stack Web Development</li>
+                <li class="skill-chip">REST API Integration</li>
+                <li class="skill-chip">UI Implementation</li>
+                <li class="skill-chip">Game Development</li>
+                <li class="skill-chip">Database Design</li>
+              </ul>
             </div>
             <div class="skill-category">
-              <h3>Technologies</h3>
-              <div class="skill-bar">
-                <div class="skill-name">HTML/CSS/JS</div>
-                <div class="skill-progress" data-level="80"></div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-name">React & Frameworks</div>
-                <div class="skill-progress" data-level="65"></div>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-name">Database & APIs</div>
-                <div class="skill-progress" data-level="75"></div>
-              </div>
+              <h3>Tech Stack</h3>
+              <ul class="skill-chips">
+                <li class="skill-chip">JavaScript</li>
+                <li class="skill-chip">TypeScript</li>
+                <li class="skill-chip">React</li>
+                <li class="skill-chip">PHP</li>
+                <li class="skill-chip">MySQL</li>
+                <li class="skill-chip">HTML & CSS</li>
+                <li class="skill-chip">Unity</li>
+                <li class="skill-chip">C#</li>
+                <li class="skill-chip">Python</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Experience -->
+    <section id="background" class="section background">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Background</span>
+          <h2 class="section-title">Education & experience</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="background-grid">
+          <div class="timeline-column">
+            <h3 class="timeline-heading">
+              <i class="fas fa-graduation-cap"></i>
+              Education
+            </h3>
+            <div class="timeline">
+              <article class="timeline-entry">
+                <time class="timeline-period">2022 — Present</time>
+                <h4 class="timeline-role">Bachelor of Informatics Engineering</h4>
+                <p class="timeline-org">Your University, Jakarta</p>
+                <ul class="timeline-details">
+                  <li>Focus on web development and software engineering</li>
+                  <li>Final project: HealthySim, a health simulation game in Unity</li>
+                  <li>Coursework: databases, algorithms, system design</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+          <div class="timeline-column">
+            <h3 class="timeline-heading">
+              <i class="fas fa-briefcase"></i>
+              Experience
+            </h3>
+            <div class="timeline">
+              <article class="timeline-entry">
+                <time class="timeline-period">2025</time>
+                <h4 class="timeline-role">Final Project — HealthySim</h4>
+                <p class="timeline-org">Capstone · Game Development</p>
+                <ul class="timeline-details">
+                  <li>Built a health-themed simulation game using Unity and C#</li>
+                  <li>Submitted as final year project for Informatics Engineering</li>
+                </ul>
+              </article>
+              <article class="timeline-entry">
+                <time class="timeline-period">2024</time>
+                <h4 class="timeline-role">DINI Sehat Mental</h4>
+                <p class="timeline-org">Mental Health Screening App</p>
+                <ul class="timeline-details">
+                  <li>Web application with mental health assessment forms</li>
+                  <li>Built with PHP, TypeScript, and Blade templates</li>
+                </ul>
+              </article>
+              <article class="timeline-entry">
+                <time class="timeline-period">2024 — Present</time>
+                <h4 class="timeline-role">Independent Web Developer</h4>
+                <p class="timeline-org">Personal Projects</p>
+                <ul class="timeline-details">
+                  <li>Built Akredoc, a document management system with auth</li>
+                  <li>Developed full-stack apps using React, PHP, and MySQL</li>
+                </ul>
+              </article>
             </div>
           </div>
         </div>
@@ -298,7 +361,7 @@
                   <span>Instagram</span>
                 </a>
                 <a
-                  href="http://discordapp.com/users/617594776262541314"
+                  href="https://discord.com/users/617594776262541314"
                   class="social-link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -329,21 +392,25 @@
           </div>
           <div class="contact-form">
             <form id="contact-form">
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="contact-gotcha">Leave blank</label>
+                <input type="text" id="contact-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
               <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" required />
+                <input type="text" id="name" name="name" autocomplete="name" required />
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" required />
+                <input type="email" id="email" name="email" autocomplete="email" required />
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" />
+                <input type="text" id="subject" name="subject" autocomplete="off" />
               </div>
               <div class="form-group">
                 <label for="message">Your Message</label>
-                <textarea id="message" rows="5" required></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
               </div>
               <button type="submit" class="cta-button primary">
                 <span>Send Message</span>
@@ -385,6 +452,7 @@
               <h3>Navigate</h3>
               <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#background">Experience</a></li>
                 <li><a href="#work">Learning</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -404,8 +472,12 @@
             <h3>Learning Journey</h3>
             <p>Follow my coding journey and learning progress.</p>
             <form class="newsletter-form">
-              <input type="email" placeholder="Your email address" />
-              <button type="submit">
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="newsletter-gotcha">Leave blank</label>
+                <input type="text" id="newsletter-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+              <input type="email" name="email" placeholder="Your email address" autocomplete="email" required />
+              <button type="submit" aria-label="Subscribe to newsletter">
                 <i class="fas fa-paper-plane"></i>
               </button>
             </form>
@@ -421,7 +493,12 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
+      integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

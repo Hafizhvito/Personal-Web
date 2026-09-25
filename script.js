@@ -55,13 +55,6 @@ const PROJECTS = [
   },
 ];
 
-const ROTATING_WORDS = [
-  "clarity & care",
-  "code & purpose",
-  "design & function",
-  "curiosity & craft",
-];
-
 const PARTICLES_CONFIG = {
   particles: {
     number: { value: 34, density: { enable: true, value_area: 900 } },
@@ -284,24 +277,6 @@ function initNavbarScroll(navbar) {
   updateNavbar();
 }
 
-function initDynamicText() {
-  const dynamicText = document.getElementById("dynamic-text");
-  if (!dynamicText) {
-    return;
-  }
-
-  let index = 0;
-
-  setInterval(() => {
-    dynamicText.style.opacity = "0";
-    setTimeout(() => {
-      dynamicText.textContent = ROTATING_WORDS[index];
-      dynamicText.style.opacity = "1";
-      index = (index + 1) % ROTATING_WORDS.length;
-    }, 500);
-  }, 3000);
-}
-
 function initHeroAnimation() {
   document.querySelectorAll(".hero-title .title-line").forEach((line, i) => {
     setTimeout(() => line.classList.add("active"), i * 200);
@@ -348,8 +323,8 @@ function initParallax() {
   );
 }
 
-function initTechBubbles() {
-  document.querySelectorAll(".tech-bubble").forEach((bubble, i) => {
+function initValueBubbles() {
+  document.querySelectorAll(".value-bubble").forEach((bubble, i) => {
     bubble.style.animationDelay = `${i * 0.3}s`;
   });
 }
@@ -399,12 +374,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initFooter();
   const navbar = initNavigation();
   initNavbarScroll(navbar);
-  initDynamicText();
   initHeroAnimation();
   initProjects();
   initScrollReveal();
   initParallax();
-  initTechBubbles();
+  initValueBubbles();
   initImageFallbacks();
   initForms();
   initParticles();

@@ -1,6 +1,6 @@
-# Personal Portfolio — Vito
+# Personal Portfolio: Vito
 
-Static portfolio site for my work as an Informatics Engineering graduate and full-stack developer. Built with plain HTML, CSS, and JavaScript — no framework, no build step.
+Static portfolio site introducing my background, strengths, and selected work as an Informatics Engineering graduate at the start of my career. Built with plain HTML, CSS, and JavaScript, with no framework or build step.
 
 **Live:** [hafizhvito.github.io/Personal-Web](https://hafizhvito.github.io/Personal-Web)
 

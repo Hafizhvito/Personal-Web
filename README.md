@@ -1,17 +1,17 @@
 # Personal Portfolio — Vito
 
-Static portfolio site for my work as an Informatics Engineering student. Built with plain HTML, CSS, and JavaScript — no framework, no build step.
+Static portfolio site for my work as an Informatics Engineering graduate and full-stack developer. Built with plain HTML, CSS, and JavaScript — no framework, no build step.
 
 **Live:** [hafizhvito.github.io/Personal-Web](https://hafizhvito.github.io/Personal-Web)
 
 ## What's here
 
-- About section with skills and tech stack
+- Graduate profile with skills and tech stack
 - Education and experience timeline
 - Project grid (pulled from `script.js`)
-- Contact form and social links
+- Email contact form and social links
 
-Featured projects include **HealthySim** (Unity capstone), **DINI Sehat Mental**, **Akredoc**, and a few smaller builds. Links point to their GitHub repos.
+Featured projects include **PulseWatch**, **Biostat Hub**, **HealthSim** (Unity capstone), **Akredoc**, and **DINI Sehat Mental**. Links point to their GitHub repositories.
 
 ## Stack
 
@@ -52,13 +52,15 @@ Edit the `PROJECTS` array at the top of `script.js`:
 {
   title: "Project Name",
   category: "Web Development",
+  description: "A short explanation of the problem and solution.",
   tags: ["React", "PHP"],
-  image: "assets/images/your-screenshot.jpg",
+  symbol: "PN",
+  tone: "sage",
   github: "https://github.com/Hafizhvito/your-repo",
 }
 ```
 
-Drop a screenshot in `assets/images/`. If the image is missing, a placeholder shows instead.
+Project cards use calm, code-native visual treatments, so no screenshot is required.
 
 ## Contact
 

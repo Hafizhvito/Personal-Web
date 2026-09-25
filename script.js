@@ -1,72 +1,84 @@
 const PROJECTS = [
   {
-    title: "HealthySim",
-    category: "Final Project · Game Development",
-    tags: ["Unity", "C#", "Simulation"],
-    image: "assets/images/healthysim-project.jpg",
+    title: "PulseWatch",
+    category: "Monitoring Platform",
+    description: "A self-hosted uptime and API monitoring platform with scheduled checks, incident tracking, and performance analytics.",
+    tags: ["Next.js", "TypeScript", "MySQL", "Prisma"],
+    symbol: "PW",
+    tone: "sage",
+    github: "https://github.com/Hafizhvito/pulsewatch",
+  },
+  {
+    title: "Biostat Hub",
+    category: "Learning Platform",
+    description: "A full-stack biostatistics and SPSS learning hub with lessons, quizzes, calculators, downloads, and an admin panel.",
+    tags: ["Next.js", "Express", "TypeScript", "MySQL"],
+    symbol: "BH",
+    tone: "sand",
+    github: "https://github.com/Hafizhvito/Biostat-hub",
+  },
+  {
+    title: "HealthSim",
+    category: "Capstone · Game Development",
+    description: "A health-focused daily-life simulation with nutrition, energy, work, dialogue, and character progression systems.",
+    tags: ["Unity 6", "C#", "URP", "Game Systems"],
+    symbol: "HS",
+    tone: "mist",
     github: "https://github.com/Hafizhvito/HealthySimV1",
   },
   {
-    title: "DINI Sehat Mental",
-    category: "Web Development",
-    tags: ["PHP", "TypeScript", "Mental Health"],
-    image: "assets/images/dini-sehat-mental-project.jpg",
-    github: "https://github.com/Hafizhvito/DINI-Sehat-Mental",
-  },
-  {
-    title: "Akredoc - Document Management System",
-    category: "Web Development",
+    title: "Akredoc",
+    category: "Document Management",
+    description: "A document monitoring and management system designed for Informatics Engineering accreditation workflows.",
     tags: ["React", "Tailwind CSS", "PHP", "MySQL"],
-    image: "assets/images/akredoc-project.jpg",
+    symbol: "AK",
+    tone: "clay",
     github: "https://github.com/Hafizhvito/Akredoc",
   },
   {
-    title: "TClicker - Auto Clicker Tool",
-    category: "Desktop Application",
-    tags: ["Python"],
-    image: "assets/images/tclicker-project.jpg",
+    title: "DINI Sehat Mental",
+    category: "Mental Health Web App",
+    description: "A web application supporting structured mental-health screening through accessible assessment forms.",
+    tags: ["PHP", "TypeScript", "Blade"],
+    symbol: "DS",
+    tone: "lavender",
+    github: "https://github.com/Hafizhvito/DINI-Sehat-Mental",
+  },
+  {
+    title: "TClicker",
+    category: "Desktop Utility",
+    description: "A lightweight Python automation tool for repeatable clicking and recorded desktop actions.",
+    tags: ["Python", "Automation", "Desktop"],
+    symbol: "TC",
+    tone: "slate",
     github: "https://github.com/Hafizhvito/TClicker",
-  },
-  {
-    title: "Currency Conversion Calculator",
-    category: "Web Development",
-    tags: ["HTML", "CSS", "JavaScript"],
-    image: "assets/images/portfolio-project.jpg",
-    github: "https://github.com/Hafizhvito/currency-converter",
-  },
-  {
-    title: "Weather Dashboard",
-    category: "Web Development",
-    tags: ["API Integration"],
-    image: "assets/images/weather-dashboard-concept.jpg",
-    github: "https://github.com/Hafizhvito/weather-app",
   },
 ];
 
 const ROTATING_WORDS = [
-  "color & soul",
-  "passion & code",
+  "clarity & care",
+  "code & purpose",
   "design & function",
-  "creativity & tech",
+  "curiosity & craft",
 ];
 
 const PARTICLES_CONFIG = {
   particles: {
-    number: { value: 80, density: { enable: true, value_area: 800 } },
-    color: { value: "#6c5ce7" },
+    number: { value: 34, density: { enable: true, value_area: 900 } },
+    color: { value: "#779487" },
     shape: { type: "circle" },
-    opacity: { value: 0.5, random: true },
-    size: { value: 3, random: true },
+    opacity: { value: 0.22, random: true },
+    size: { value: 2.5, random: true },
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#6c5ce7",
-      opacity: 0.3,
+      color: "#9caf9f",
+      opacity: 0.16,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 2,
+      speed: 0.7,
       direction: "none",
       random: true,
       straight: false,
@@ -116,12 +128,11 @@ function bindImageFallback(img) {
 function renderProjectCard(project) {
   const card = createElement("div", { className: "project-card" });
 
-  const media = createElement("div", { className: "project-media" });
-  const img = createElement("img", {
-    attrs: { src: project.image, alt: project.title, loading: "lazy" },
+  const media = createElement("div", {
+    className: `project-media project-visual tone-${project.tone}`,
   });
-  bindImageFallback(img);
-  media.appendChild(img);
+  media.appendChild(createElement("span", { className: "project-symbol", text: project.symbol }));
+  media.appendChild(createElement("span", { className: "project-visual-label", text: project.category }));
 
   const overlay = createElement("div", { className: "project-overlay" });
   const overlayContent = createElement("div", { className: "overlay-content" });
@@ -146,6 +157,7 @@ function renderProjectCard(project) {
     createElement("span", { className: "project-category", text: project.category })
   );
   info.appendChild(createElement("h3", { text: project.title }));
+  info.appendChild(createElement("p", { className: "project-description", text: project.description }));
 
   const tags = createElement("div", { className: "project-tags" });
   for (const tag of project.tags) {
@@ -356,31 +368,16 @@ function initForms() {
         return;
       }
 
-      showNotification(
-        "Thank you for your message! I will get back to you soon.",
-        "success"
-      );
+      const formData = new FormData(contactForm);
+      const senderName = String(formData.get("name") || "").trim();
+      const senderEmail = String(formData.get("email") || "").trim();
+      const subject = String(formData.get("subject") || "Portfolio inquiry").trim();
+      const message = String(formData.get("message") || "").trim();
+      const body = `${message}\n\nFrom: ${senderName} (${senderEmail})`;
+
+      showNotification("Opening your email app…", "success");
+      window.location.href = `mailto:pixelsreet@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       contactForm.reset();
-    });
-  }
-
-  const newsletterForm = document.querySelector(".newsletter-form");
-  if (newsletterForm) {
-    newsletterForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (isHoneypotFilled(newsletterForm)) {
-        return;
-      }
-
-      const emailInput = newsletterForm.querySelector('input[type="email"]');
-      if (!emailInput?.value.trim()) {
-        showNotification("Please enter your email address", "error");
-        return;
-      }
-
-      showNotification("Thank you for subscribing to my newsletter!", "success");
-      newsletterForm.reset();
     });
   }
 }

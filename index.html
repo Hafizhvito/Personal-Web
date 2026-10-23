@@ -6,504 +6,340 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
     />
     <meta
       name="description"
-      content="Portfolio Hafizh Vito Pratomo, an Informatics Engineering graduate who is ready to learn, contribute, and grow across different roles."
+      content="Portfolio of Hafizh Vito Pratomo. Informatics engineering graduate building full-stack web applications, monitoring platforms, and interactive systems."
     />
-    <title>Hafizh Vito | Portfolio</title>
+    <meta property="og:title" content="Hafizh Vito Pratomo - Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Hafizh Vito Pratomo. Informatics engineering graduate building full-stack web applications, monitoring platforms, and interactive systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hafizhvito.github.io/Personal-Web/" />
+    <title>Hafizh Vito Pratomo - Portfolio</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Animated Background Elements -->
-    <div class="gradient-bg"></div>
-    <div class="bg-blur-circle circle-1"></div>
-    <div class="bg-blur-circle circle-2"></div>
-    <div class="bg-blur-circle circle-3"></div>
-    <div id="particles-js"></div>
-
-    <!-- Navigation -->
-    <nav class="glass-navbar">
-      <div class="container">
-        <a href="#" class="logo">
-          <div class="logo-dot"></div>
-          <span>Vito</span>
-        </a>
-        <div class="nav-links">
+    <!-- Top Navigation -->
+    <header class="site-header">
+      <nav class="site-nav container" aria-label="Main navigation">
+        <a href="#" class="wordmark">Hafizh Vito Pratomo</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          Menu
+        </button>
+        <div class="nav-links" id="primary-nav">
+          <a href="#projects" class="nav-link">Projects</a>
           <a href="#about" class="nav-link">About</a>
           <a href="#background" class="nav-link">Experience</a>
-          <a href="#work" class="nav-link">Process</a>
-          <a href="#projects" class="nav-link">Projects</a>
           <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-          <div class="hamburger"></div>
-        </button>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="availability-pill">
-            <span class="availability-dot"></span>
-            Early-career and open to opportunities
-          </div>
-          <h1 class="hero-title">
-            <span class="title-line">Ready to learn,</span>
-            <span class="title-line">contribute, and</span>
-            <span class="title-line"
-              ><span class="text-gradient">grow along the way</span></span
-            >
-          </h1>
-          <p class="hero-subtitle">
-            Hi, I'm <span class="highlight">Vito</span>, an Informatics
-            Engineering graduate at the start of my career. I enjoy working
-            with technology, but I am also interested in roles that involve
-            people, communication, coordination, and practical problem-solving.
-          </p>
-          <div class="hero-cta">
-            <a href="#projects" class="cta-button primary">
-              <span>See My Work</span>
-              <div class="arrow-icon">
-                <svg
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1kwLv8-ApGJDKrSIyFRO6BAzUBkjzg7jy/view?usp=sharing"
-              class="cta-button secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>View CV</span>
-              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-            </a>
-            <a href="#contact" class="cta-button secondary">
-              <span>Get in Touch</span>
-            </a>
-          </div>
-          <div class="hero-scroll">
-            <div class="scroll-animation"></div>
-            <span>Explore my work</span>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <div class="profile-container">
-            <div class="profile-image">
-              <img src="assets/images/profile.png" alt="Vito" />
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section container" aria-label="Introduction">
+        <div class="hero-grid">
+          <div class="hero-main">
+            <span class="hero-meta">Jakarta, Indonesia · Informatics Engineering</span>
+            <h1 class="hero-title">
+              Informatics graduate building full-stack web platforms and interactive software.
+            </h1>
+            <p class="hero-summary">
+              Informatics Engineering graduate based in Jakarta with a strong foundation in modern web development, database design, and software systems. I build dependable full-stack applications and digital tools, combining systematic problem-solving with clear communication and team adaptability.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="hero-link hero-link-primary">
+                View projects -&gt;
+              </a>
+              <a
+                href="https://drive.google.com/file/d/10-kgyLiik5M_QDmVDtyLzn0PffqUGN4M/view?usp=sharing"
+                class="hero-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Curriculum Vitae -&gt;
+              </a>
+              <a href="#contact" class="hero-link">
+                Get in touch -&gt;
+              </a>
             </div>
-            <div class="decorative-shape shape-1"></div>
-            <div class="decorative-shape shape-2"></div>
-            <div class="value-bubble bubble-1">Curious</div>
-            <div class="value-bubble bubble-2">Adaptable</div>
-            <div class="value-bubble bubble-3">Communication</div>
-            <div class="value-bubble bubble-4">Teamwork</div>
+          </div>
+          <div class="hero-aside">
+            <div class="hero-photo-wrapper">
+              <img
+                src="assets/images/profile.png"
+                alt="Portrait photograph of Hafizh Vito Pratomo"
+                class="hero-photo"
+                width="200"
+                height="200"
+              />
+            </div>
+            <span class="hero-caption">
+              Hafizh Vito Pratomo<br />
+              YARSI University Graduate
+            </span>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">About Me</span>
-          <h2 class="section-title">Still learning, ready to contribute</h2>
-          <div class="section-divider"></div>
-        </div>
+      <!-- Projects Section -->
+      <section id="projects" class="section container" aria-labelledby="projects-heading">
+        <span class="section-label">Selected Work</span>
+        <h2 id="projects-heading" class="section-title">Projects and platforms</h2>
+        <p class="section-lead">
+          A selected index of production platforms, academic systems, and utility tools developed between 2024 and 2026.
+        </p>
+        <!-- Single source of truth rendered via script.js -->
+        <div id="projects-container"></div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="section container" aria-labelledby="about-heading">
+        <span class="section-label">Background &amp; Perspective</span>
+        <h2 id="about-heading" class="section-title">About and working approach</h2>
         <div class="about-grid">
-          <div class="about-content">
-            <p class="lead">
-              I am still building my professional experience, and I see that as
-              room to learn, adapt, and grow with the right opportunity.
+          <div class="about-prose">
+            <p>
+              I hold a Bachelor of Informatics Engineering from YARSI University with a 3.70 GPA. My training focused on software engineering, database management, and web application architecture.
             </p>
             <p>
-              My technical background has trained me to think systematically
-              and solve problems step by step. At the same time, I enjoy
-              discussing ideas, listening to others, asking questions, and
-              working toward a shared goal. I am open to technology roles and
-              other fields where communication, coordination, and adaptability
-              are valued.
+              My technical projects center on solving practical problems: continuous uptime verification with PulseWatch, educational curriculum delivery with Biostat Hub, accreditation record tracking with Akredoc, and clinical screening with DINI Sehat Mental.
             </p>
-            <p>
-              I often use AI tools and agents to explore ideas, learn faster,
-              and support my work. I still review the output, test what I use,
-              and take responsibility for the final result.
+            <p class="about-callout">
+              Working approach: I break complex problems into small, testable milestones. I communicate decisions clearly, gather feedback early, and test systems against practical edge cases.
+            </p>
+            <p class="about-callout">
+              Use of AI tools: I routinely use AI coding assistants and language models to accelerate research, explore alternative approaches, and debug implementations. Every generated component is manually reviewed, verified, and tested prior to deployment.
             </p>
           </div>
-          <div class="about-skills">
-            <div class="skill-category">
-              <h3>Strengths</h3>
-              <ul class="skill-chips">
-                <li class="skill-chip">Communication</li>
-                <li class="skill-chip">Problem Solving</li>
-                <li class="skill-chip">Collaboration</li>
-                <li class="skill-chip">Research & Learning</li>
-                <li class="skill-chip">Digital Literacy</li>
-              </ul>
+          <div class="about-sidebar">
+            <div class="toolkit-group">
+              <h3 class="toolkit-label">Languages</h3>
+              <p class="toolkit-list">TypeScript, JavaScript, PHP, C#, Python, SQL, HTML, CSS</p>
             </div>
-            <div class="skill-category">
-              <h3>Technical Toolkit</h3>
-              <ul class="skill-chips">
-                <li class="skill-chip">JavaScript</li>
-                <li class="skill-chip">TypeScript</li>
-                <li class="skill-chip">React</li>
-                <li class="skill-chip">PHP</li>
-                <li class="skill-chip">MySQL</li>
-                <li class="skill-chip">HTML & CSS</li>
-                <li class="skill-chip">Unity</li>
-                <li class="skill-chip">C#</li>
-                <li class="skill-chip">Python</li>
-              </ul>
+            <div class="toolkit-group">
+              <h3 class="toolkit-label">Frameworks &amp; Libraries</h3>
+              <p class="toolkit-list">React, Next.js, Express, Tailwind CSS, Blade</p>
+            </div>
+            <div class="toolkit-group">
+              <h3 class="toolkit-label">Databases &amp; Engines</h3>
+              <p class="toolkit-list">MySQL, Prisma ORM, Unity 6 (URP), Git</p>
+            </div>
+            <div class="toolkit-group">
+              <h3 class="toolkit-label">Core Strengths</h3>
+              <p class="toolkit-list">Systematic debugging, asynchronous workflows, technical documentation, relational schema design</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Education & Experience -->
-    <section id="background" class="section background">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Background</span>
-          <h2 class="section-title">Education & experience</h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="background-grid">
-          <div class="timeline-column">
-            <h3 class="timeline-heading">
-              <i class="fas fa-graduation-cap"></i>
-              Education
-            </h3>
-            <div class="timeline">
-              <article class="timeline-entry">
-                <time class="timeline-period">Aug 2022 - Jul 2026</time>
-                <h4 class="timeline-role">Bachelor of Informatics Engineering</h4>
-                <p class="timeline-org">YARSI University · Jakarta, Indonesia</p>
-                <ul class="timeline-details">
+      <!-- Education & Experience Ledger -->
+      <section id="background" class="section container" aria-labelledby="background-heading">
+        <span class="section-label">Chronology</span>
+        <h2 id="background-heading" class="section-title">Education and experience</h2>
+        <div class="ledger-section">
+          <div class="ledger-column">
+            <h3 class="ledger-column-title">Education</h3>
+            <div class="ledger-entry reveal-item">
+              <span class="ledger-date">2022 - 2026</span>
+              <div class="ledger-detail">
+                <h4>Bachelor of Informatics Engineering</h4>
+                <p class="ledger-place">YARSI University · Jakarta, Indonesia</p>
+                <ul class="ledger-notes">
                   <li>GPA: 3.70 / 4.00</li>
                   <li>Focus on web development and software engineering</li>
                   <li>Final project: HealthSim, a health simulation game in Unity</li>
                   <li>Coursework: databases, algorithms, system design</li>
                 </ul>
-              </article>
-              <article class="timeline-entry">
-                <time class="timeline-period">Jun 2019 - May 2022</time>
-                <h4 class="timeline-role">High School Diploma in Social Sciences</h4>
-                <p class="timeline-org">SMA Negeri 72 Jakarta · Jakarta, Indonesia</p>
-                <ul class="timeline-details">
-                  <li>Completed the Social Sciences program</li>
+              </div>
+            </div>
+            <div class="ledger-entry reveal-item">
+              <span class="ledger-date">2019 - 2022</span>
+              <div class="ledger-detail">
+                <h4>High School Diploma in Social Sciences</h4>
+                <p class="ledger-place">SMA Negeri 72 Jakarta · Jakarta, Indonesia</p>
+                <ul class="ledger-notes">
+                  <li>Completed the Social Sciences curriculum</li>
                 </ul>
-              </article>
+              </div>
             </div>
           </div>
-          <div class="timeline-column">
-            <h3 class="timeline-heading">
-              <i class="fas fa-briefcase"></i>
-              Experience
-            </h3>
-            <div class="timeline">
-              <article class="timeline-entry">
-                <time class="timeline-period">2026</time>
-                <h4 class="timeline-role">PulseWatch & Biostat Hub</h4>
-                <p class="timeline-org">Full-Stack Web Development</p>
-                <ul class="timeline-details">
+
+          <div class="ledger-column">
+            <h3 class="ledger-column-title">Experience &amp; Builds</h3>
+            <div class="ledger-entry reveal-item">
+              <span class="ledger-date">2026</span>
+              <div class="ledger-detail">
+                <h4>PulseWatch &amp; Biostat Hub</h4>
+                <p class="ledger-place">Full-Stack Web Development</p>
+                <ul class="ledger-notes">
                   <li>Built an uptime monitoring platform with secure scheduled checks</li>
                   <li>Developed a biostatistics learning platform with an admin-managed curriculum</li>
                 </ul>
-              </article>
-              <article class="timeline-entry">
-                <time class="timeline-period">2026</time>
-                <h4 class="timeline-role">Final Project: HealthSim</h4>
-                <p class="timeline-org">Capstone · Game Development</p>
-                <ul class="timeline-details">
-                  <li>Built a playable health-themed daily-life simulation using Unity and C#</li>
+              </div>
+            </div>
+            <div class="ledger-entry reveal-item">
+              <span class="ledger-date">2026</span>
+              <div class="ledger-detail">
+                <h4>HealthSim</h4>
+                <p class="ledger-place">Capstone · Game Development</p>
+                <ul class="ledger-notes">
+                  <li>Built a playable daily-life health simulation using Unity and C#</li>
                   <li>Designed interconnected systems for nutrition, energy, work, and progression</li>
                 </ul>
-              </article>
-              <article class="timeline-entry">
-                <time class="timeline-period">2024 - 2026</time>
-                <h4 class="timeline-role">Independent Project Builder</h4>
-                <p class="timeline-org">Personal Projects</p>
-                <ul class="timeline-details">
-                  <li>Built Akredoc and DINI Sehat Mental for practical use cases</li>
-                  <li>Developed full-stack applications with React, Next.js, PHP, and MySQL</li>
+              </div>
+            </div>
+            <div class="ledger-entry reveal-item">
+              <span class="ledger-date">2024 - 2026</span>
+              <div class="ledger-detail">
+                <h4>Independent Software Development</h4>
+                <p class="ledger-place">Personal &amp; Practical Projects</p>
+                <ul class="ledger-notes">
+                  <li>Built Akredoc for academic accreditation workflow tracking</li>
+                  <li>Developed DINI Sehat Mental for structured mental-health screening</li>
                 </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning Process Section -->
-    <section id="work" class="section process">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">My Process</span>
-          <h2 class="section-title">How I approach new work</h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="process-steps">
-          <div class="process-step">
-            <div class="step-number">01</div>
-            <h3>Understand & Learn</h3>
-            <p>
-              I start by understanding the goal, the people involved, and what
-              a useful result should look like.
-            </p>
-            <div class="step-icon">
-              <i class="fas fa-search"></i>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-number">02</div>
-            <h3>Plan & Communicate</h3>
-            <p>
-              I break the work into manageable steps, ask questions, and share
-              important updates early.
-            </p>
-            <div class="step-icon">
-              <i class="fas fa-comments"></i>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-number">03</div>
-            <h3>Do & Adapt</h3>
-            <p>
-              I work carefully, use the tools available to me, and adjust when
-              new information or feedback comes in.
-            </p>
-            <div class="step-icon">
-              <i class="fas fa-arrows-rotate"></i>
-            </div>
-          </div>
-          <div class="process-step">
-            <div class="step-number">04</div>
-            <h3>Review & Improve</h3>
-            <p>
-              I check the result, ask for feedback, and carry what I learn into
-              the next task.
-            </p>
-            <div class="step-icon">
-              <i class="fas fa-circle-check"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">My Projects</span>
-          <h2 class="section-title">Selected work & experiments</h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="projects-grid" id="projects-container"></div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Let's Connect</span>
-          <h2 class="section-title">I'd love to hear from you</h2>
-          <div class="section-divider"></div>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="info-card">
-              <h3>Get in Touch</h3>
-              <p>
-                I am open to entry-level opportunities, collaborative projects,
-                and conversations across technology and other fields. If you
-                think I could contribute to your team, I would be glad to talk.
-              </p>
-              <div class="contact-method">
-                <div class="method-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="method-details">
-                  <span>Email</span>
-                  <a href="mailto:pixelsreet@gmail.com">pixelsreet@gmail.com</a>
-                </div>
-              </div>
-              <div class="contact-method">
-                <div class="method-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="method-details">
-                  <span>Location</span>
-                  <span>Jakarta, Indonesia</span>
-                </div>
-              </div>
-            </div>
-            <div class="social-links">
-              <h3>Connect with Me</h3>
-              <div class="social-grid">
-                <a
-                  href="https://www.instagram.com/hafizhvito_/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-instagram"></i>
-                  <span>Instagram</span>
-                </a>
-                <a
-                  href="https://discord.com/users/617594776262541314"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-discord"></i>
-                  <span>Discord</span>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/hafizh-vito-pratomo-abb75a2a6/"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-linkedin-in"></i>
-                  <span>LinkedIn</span>
-                </a>
-                <a
-                  href="https://github.com/Hafizhvito"
-                  class="social-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i>
-                  <span>GitHub</span>
-                </a>
               </div>
             </div>
           </div>
-          <div class="contact-form">
-            <form id="contact-form">
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section container" aria-labelledby="contact-heading">
+        <span class="section-label">Contact</span>
+        <h2 id="contact-heading" class="section-title">Initiate a conversation</h2>
+        <div class="contact-grid">
+          <div class="contact-info-col">
+            <p>
+              I am open to entry-level software engineering roles, collaborative web builds, and technical discussions. If you would like to discuss an opportunity, send a direct email or use the form.
+            </p>
+            <div>
+              <a href="mailto:hafizhvito2@gmail.com" class="contact-email-link">
+                hafizhvito2@gmail.com
+              </a>
+            </div>
+            <div class="contact-meta">
+              Location: Jakarta, Indonesia (UTC+7)
+            </div>
+            <div class="contact-social-list">
+              <a
+                href="https://github.com/Hafizhvito"
+                class="contact-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub -&gt;
+              </a>
+              <a
+                href="https://www.linkedin.com/in/hafizh-vito-pratomo-abb75a2a6/"
+                class="contact-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn -&gt;
+              </a>
+              <a
+                href="https://discord.com/users/617594776262541314"
+                class="contact-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discord -&gt;
+              </a>
+              <a
+                href="https://www.instagram.com/hafizhvito_/"
+                class="contact-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram -&gt;
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-col">
+            <form id="contact-form" class="contact-form">
               <div class="form-honeypot" aria-hidden="true">
                 <label for="contact-gotcha">Leave blank</label>
-                <input type="text" id="contact-gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+                <input
+                  type="text"
+                  id="contact-gotcha"
+                  name="_gotcha"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
               </div>
-              <div class="form-group">
+              <div class="form-row">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" autocomplete="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
               </div>
-              <div class="form-group">
+              <div class="form-row">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" autocomplete="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
               </div>
-              <div class="form-group">
+              <div class="form-row">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" autocomplete="off" />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  autocomplete="off"
+                />
               </div>
-              <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" class="cta-button primary">
-                <span>Send Message</span>
-                <div class="arrow-icon">
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
+              <button type="submit" class="form-submit-btn">
+                Send via Email -&gt;
               </button>
             </form>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <a href="#" class="logo">
-              <div class="logo-dot"></div>
-              <span>Vito</span>
-            </a>
-            <p>
-              An early-career graduate who is ready to learn, contribute, and
-              grow through meaningful work.
-            </p>
-          </div>
-          <div class="footer-links">
-            <div class="link-group">
-              <h3>Navigate</h3>
-              <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#background">Experience</a></li>
-                <li><a href="#work">Process</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div class="link-group">
-              <h3>Explore</h3>
-              <ul>
-                <li><a href="https://github.com/Hafizhvito/Biostat-hub" target="_blank" rel="noopener noreferrer">Biostat Hub</a></li>
-                <li><a href="https://github.com/Hafizhvito/HealthySimV1" target="_blank" rel="noopener noreferrer">HealthSim</a></li>
-                <li><a href="https://github.com/Hafizhvito/pulsewatch" target="_blank" rel="noopener noreferrer">PulseWatch</a></li>
-                <li><a href="https://github.com/Hafizhvito" target="_blank" rel="noopener noreferrer">GitHub Profile</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-cta">
-            <h3>Open to a conversation.</h3>
-            <p>I am happy to discuss entry-level roles, projects, or other ways I may be able to contribute.</p>
-            <a href="mailto:pixelsreet@gmail.com" class="footer-email">pixelsreet@gmail.com</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; <span id="current-year"></span> Vito.</p>
-          <p>Designed & built with care in Indonesia.</p>
-        </div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="current-year"></span> Hafizh Vito Pratomo. Handcrafted with semantic HTML and CSS.</p>
+        <p class="muted">Jakarta, Indonesia</p>
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"
-      integrity="sha384-d+UOwmNNIC7V4izkTAKSXzWhjC2GxiS9PTykO1XdOPC3nc2z65UOS7SP6QdKPA70"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="script.js"></script>
   </body>
 </html>

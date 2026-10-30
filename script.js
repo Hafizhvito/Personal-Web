@@ -5,14 +5,15 @@
 
 const PROJECTS = [
   {
-    title: "PulseWatch",
-    category: "Monitoring Platform",
-    year: "2026",
-    description: "A self-hosted uptime and API monitoring platform with scheduled checks, incident tracking, and performance analytics.",
-    tags: ["Next.js", "TypeScript", "MySQL", "Prisma"],
-    github: "https://github.com/Hafizhvito/pulsewatch",
-    image: "assets/images/pulsewatch.webp",
-    imageAlt: "Screenshot of the PulseWatch endpoint monitoring dashboard showing response time metrics and check history.",
+    title: "DINI Sehat Mental",
+    category: "Mental Health Platform",
+    year: "2024",
+    description: "A web application supporting structured mental-health screening through accessible assessment forms.",
+    tags: ["PHP", "TypeScript", "Blade"],
+    github: "https://github.com/Hafizhvito/DINI_SEHAT_MENTAL",
+    live: "https://streskerjaperempuan.com/",
+    image: "assets/images/dini-sehat-mental.png",
+    imageAlt: "Screenshot of the DINI Sehat Mental platform home screen showing the work stress screening interface.",
   },
   {
     title: "Biostat Hub",
@@ -24,6 +25,14 @@ const PROJECTS = [
     live: "https://biostatresearch.com/",
     image: "assets/images/biostat-hub.webp",
     imageAlt: "Screenshot of the Biostat Hub learning platform home screen showing structured statistics curriculum modules.",
+  },
+  {
+    title: "PulseWatch",
+    category: "Monitoring Platform",
+    year: "2026",
+    description: "A self-hosted uptime and API monitoring platform with scheduled checks, incident tracking, and performance analytics.",
+    tags: ["Next.js", "TypeScript", "MySQL", "Prisma"],
+    github: "https://github.com/Hafizhvito/pulsewatch",
   },
   {
     title: "HealthSim",
@@ -40,15 +49,6 @@ const PROJECTS = [
     description: "A document monitoring and management system designed for Informatics Engineering accreditation workflows.",
     tags: ["React", "Tailwind CSS", "PHP", "MySQL"],
     github: "https://github.com/Hafizhvito/Akredoc",
-  },
-  {
-    title: "DINI Sehat Mental",
-    category: "Mental Health Web App",
-    year: "2024",
-    description: "A web application supporting structured mental-health screening through accessible assessment forms.",
-    tags: ["PHP", "TypeScript", "Blade"],
-    github: "https://github.com/Hafizhvito/DINI-Sehat-Mental",
-    live: "https://streskerjaperempuan.com/",
   },
   {
     title: "TClicker",
